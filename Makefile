@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-all: rpz.pdf
+all: rpz.pdf titlepage.pdf
 
 # latext -> pdf
 %.pdf: %.tex
