@@ -13,6 +13,12 @@
 % Полезные макросы листингов.
 \include{macros.inc}
 
+% Пакет для листингов кода
+\usepackage{float}
+\floatstyle{ruled}
+\newfloat{program}{th}{lop}
+\floatname{program}{Программа}
+
 \begin{document}
 
 \frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
