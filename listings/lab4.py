@@ -14,23 +14,23 @@ def line(y1_0, y2_0):
     eps = 0.5 * 10 ** -4
     for i in range(100000):
         y1.append(y1[-1] + h * y2[-1])
-        y2.append(y2[-1] + 
+        y2.append(y2[-1] +
                   h*(-3*y2[-1] ** 3 + ny * y2[-1] - y1[-1]))
-        if (np.abs(y1_0 - y1[-1]) < eps and 
+        if (np.abs(y1_0 - y1[-1]) < eps and
             np.abs(y2_0 - y2[-1]) < eps):
             return (y1, y2)
-    
+
     raise Exception("Cycle not found")
 
 def linear_form(y1_0, y2_0, cycle_y1, cycle_y2):
     """
-    Вычисление линеаризованной системы вдоль цикла
+    Решение линеаризованной системы вдоль цикла
     """
     y1 = [y1_0]
     y2 = [y2_0]
     for j in range(len(cycle_y1)):
         y1.append(y1[-1] + h * (y2[-1]))
-        y2.append(y2[-1] + h * (-y1[-1] + 
+        y2.append(y2[-1] + h * (-y1[-1] +
                        (-9*cycle_y2[j] ** 2 + ny) * y2[-1]))
     return [y1[-1], y2[-1]]
 

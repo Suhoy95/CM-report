@@ -9,5 +9,6 @@
   },
   "editor.rulers": [
     60, 80
-  ]
+  ],
+  "files.trimTrailingWhitespace": true
 }
