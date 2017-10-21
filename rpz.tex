@@ -14,12 +14,16 @@
 \include{macros.inc}
 
 % Пакет для листингов кода
+\usepackage{verbatim}
 \usepackage{float}
 \floatstyle{ruled}
 \newfloat{program}{th}{lop}
 \floatname{program}{Программа}
 
 \begin{document}
+
+\pagestyle{empty}
+\include{titlepage}
 
 \frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
 
@@ -32,6 +36,8 @@
 
 \include{00-abstract}
 
+\pagestyle{plain}
+
 \tableofcontents
 
 \mainmatter % это включает нумерацию глав и секций в документе ниже
@@ -39,6 +45,9 @@
 \include{chapter-1}
 \include{chapter-2}
 \include{chapter-3}
+\include{chapter-4}
+\include{chapter-5}
+
 
 \backmatter %% Здесь заканчивается нумерованная часть документа и начинаются ссылки и
             %% заключение
@@ -49,8 +58,7 @@
 
 \appendix   % Тут идут приложения
 
-\include{90-appendix1}
-\include{91-appendix2}
+\include{appendix-src}
 
 \end{document}
 
