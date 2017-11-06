@@ -13,11 +13,11 @@ def line(y1_0, y2_0):
     y2 = [y2_0]
     eps = 0.5 * 10 ** -4
     for i in range(100000):
-        y1.append(y1[-1] + h * y2[-1])
-        y2.append(y2[-1] +
-                  h*(-3*y2[-1] ** 3 + ny * y2[-1] - y1[-1]))
-        if (np.abs(y1_0 - y1[-1]) < eps and
-            np.abs(y2_0 - y2[-1]) < eps):
+        y1.append(y1[i] + h * y2[i])
+        y2.append(y2[i] +
+                  h*(-3*y2[i] ** 3 + ny * y2[i] - y1[i]))
+        if (np.abs(y1_0 - y1[i+1]) < eps and
+            np.abs(y2_0 - y2[i+1]) < eps):
             return (y1, y2)
 
     raise Exception("Cycle not found")
@@ -28,15 +28,15 @@ def linear_form(y1_0, y2_0, cycle_y1, cycle_y2):
     """
     y1 = [y1_0]
     y2 = [y2_0]
-    for j in range(len(cycle_y1)):
-        y1.append(y1[-1] + h * (y2[-1]))
-        y2.append(y2[-1] + h * (-y1[-1] +
-                       (-9*cycle_y2[j] ** 2 + ny) * y2[-1]))
+    for i in range(len(cycle_y1)):
+        y1.append(y1[i] + h * (y2[i]))
+        y2.append(y2[i] + h * (-y1[i] +
+                       (-9*cycle_y2[i] ** 2 + ny) * y2[i]))
     return [y1[-1], y2[-1]]
 
 # Начало программы
 # вычисление поточечного описания предельного цикла
-cycle_y1, cycle_y2 = line(0.724197, 0)
+cycle_y1, cycle_y2 = line(0.72424, 0)
 
 # решение линеаризированной системы
 # с начальными условиями (1, 0) и (0, 1)
