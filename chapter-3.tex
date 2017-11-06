@@ -32,18 +32,18 @@ $y2$, описывающие наш цикл.
     \label{lab3:prog:1}
     \begin{verbatim}
 eps = 0.5 * 10 ** -4
-y1_0, y2_0 = 0.724197, 0 # начальная точка
+y1_0, y2_0 = 0.72424, 0 # начальная точка
 
 y1 = [y1_0]
 y2 = [y2_0]
 h = 0.0001
 for i in range(100000):
     # итерация метода Эйлера
-    y1.append(y1[-1] + h*(y2[-1]))
-    y2.append(y2[-1] + h*(-3*y2[-1] ** 3 + ny * y2[-1] - y1[-1]))
+    y1.append(y1[i] + h*(y2[i]))
+    y2.append(y2[i] + h*(-3*y2[i] ** 3 + ny * y2[i] - y1[i]))
     # проверка прихода в туже точку с погрешностью
-    if  np.abs(y1_0 - y1[-1]) < eps and
-        np.abs(y2_0 - y2[-1]) < eps:
+    if  np.abs(y1_0 - y1[i+1]) < eps and
+        np.abs(y2_0 - y2[i+1]) < eps:
         # вывод результатов
         print("h={h}, i={i}, h*i={period}".format(
               h=h, i=i+1, period=h*(i+1)))
