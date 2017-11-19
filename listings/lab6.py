@@ -49,7 +49,6 @@ def update_plot(strAlpha):
     figure.canvas.draw_idle()
 
 
-# Слайдер - чтобы менять параметр без перезапуска программы
 axfreq = plt.axes([0.13, 0.05, 0.55, 0.03])
 textBox = TextBox(axfreq, 'alpha', initial=str(alpha0))
 textBox.on_submit(update_plot)
