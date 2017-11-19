@@ -14,7 +14,7 @@ ax.set_ylabel("y2")
 ny = 1
 alpha0 = 0.01
 
-def line_y2(y1_0, y2_0, alpha):
+def line(y1_0, y2_0, alpha):
     # решение задачи методом Эйлера
     y1 = copy.deepcopy(y1_0)
     y2 = copy.deepcopy(y2_0)
@@ -38,11 +38,11 @@ def update_plot(strAlpha):
     # перерисовка графика в зависимости от параметра
     alpha = float(strAlpha)
     ax.cla()
-    line_y2(
+    line(
         [0.1 for a in range(100)],
         [0.1 for a in range(100)],
         alpha)
-    line_y2(
+    line(
         [2 for a in range(100)],
         [2 for a in range(100)],
         alpha)
