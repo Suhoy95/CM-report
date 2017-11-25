@@ -20,8 +20,14 @@ def line(y1_0, y2_0, sigma):
     y2 = [y2_0]
     h = 0.03
     for i in range(20000):
-        y1.append(y1[i] + h * (y2[i]) + np.sqrt(h) * sigma * np.random.randn())
-        y2.append(y2[i] + h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i]))
+        # y1.append(y1[i] + h * (y2[i]) +
+        #           np.sqrt(h) * sigma * np.random.randn())
+        # y2.append(y2[i] + h * (-3*y2[i] ** 3 +
+        #           ny * y2[i] - y1[i]))
+        y1.append(y1[i] + h * (y2[i]))
+        y2.append(y2[i] + h * (-3*y2[i] ** 3 +
+                  ny * y2[i] - y1[i]) +
+                  np.sqrt(h) * sigma * np.random.randn())
     ax.plot(y1, y2)
 
 

@@ -15,10 +15,11 @@ A level-1 auxiliary file: 80-conclusion.aux
 A level-1 auxiliary file: 81-biblio.aux
 The style file: gost780u.bst
 A level-1 auxiliary file: appendix-src.aux
+A level-1 auxiliary file: appendix-cases.aux
 Database file #1: rpz.bib
 You've used 3 entries,
             2674 wiz_defined-function locations,
-            659 strings with 5533 characters,
+            660 strings with 5551 characters,
 and the built_in function-call counts, 362 in all, are:
 = -- 33
 > -- 3
