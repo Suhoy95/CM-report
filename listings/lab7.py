@@ -26,16 +26,16 @@ def line(y1_0, y2_0, alpha):
     y2 = copy.deepcopy(y2_0)
     for i in range(len(y1_0)-1, int(T / h)):
         # Запаздывание влияет на y1
-        # y1.append(y1[i] + h * (y2[i] +
-        #                        alpha * y1[i - int(N * np.sin(2*i*h/T))]))
-        # y2.append(y2[i] +
-        #           h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i]))
+        y1.append(y1[i] + h * (y2[i] +
+                  alpha * y1[i - int(N * np.sin(2*i*h/T))]))
+        y2.append(y2[i] +
+                  h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i]))
 
         # Запаздывание влияет на y2
-        y1.append(y1[i] + h * (y2[i]))
-        y2.append(y2[i] +
-                  h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i] +
-                       alpha * y1[i - int(N * np.sin(2*i*h/T))]))
+        # y1.append(y1[i] + h * (y2[i]))
+        # y2.append(y2[i] +
+        #         h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i] +
+        #         alpha * y1[i - int(N * np.sin(2*i*h/T))]))
     ax.plot(y1, y2)
 
 
