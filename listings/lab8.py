@@ -30,16 +30,16 @@ def line(y1_0, y2_0, alpha):
     try:
         for i in range(len(y1_0)-1, int(T / h)):
             # Запаздывание влияет на y1
-            # y1.append(y1[i] + h * (y2[i] +
-            #                        alpha * integral))
-            # y2.append(y2[i] +
-            #           h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i]))
+            y1.append(y1[i] + h * (y2[i] +
+                                   alpha * integral))
+            y2.append(y2[i] +
+                      h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i]))
 
             # Запаздывание влияет на y2
-            y1.append(y1[i] + h * (y2[i]))
-            y2.append(y2[i] +
-                    h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i] +
-                        alpha * integral))
+            # y1.append(y1[i] + h * (y2[i]))
+            # y2.append(y2[i] +
+            #         h * (-3*y2[i] ** 3 + ny * y2[i] - y1[i] +
+            #             alpha * integral))
 
             integral -= h * y1[i-N+1] ** 2
             integral += h * y1[i] ** 2
