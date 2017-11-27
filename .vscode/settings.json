@@ -24,6 +24,7 @@
     "cases",
     "cite",
     "clearpage",
+    "definition",
     "floatstyle",
     "include",
     "integral",
@@ -37,6 +38,7 @@
     "numpy",
     "preamble",
     "russian",
+    "theorem",
     "verbatim"
   ]
 }
