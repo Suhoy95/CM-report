@@ -25,7 +25,8 @@ def line(y1_0, y2_0, alpha):
     # решение задачи методом Эйлера
     y1 = copy.deepcopy(y1_0)
     y2 = copy.deepcopy(y2_0)
-    _integral = lambda i, y1: h*reduce(lambda sum, x: sum + x ** 2, y1[i-N+1:i])
+    _integral = lambda i, y1: h*reduce(lambda sum, x: sum +
+                                        x ** 2, y1[i-N+1:i])
     integral = _integral(len(y1_0)-1, y1)
     try:
         for i in range(len(y1_0)-1, int(T / h)):
