@@ -14,6 +14,7 @@
   "files.trimTrailingWhitespace": true,
   "python.pythonPath": "/usr/bin/python3",
   "cSpell.words": [
+    "Bmatrix",
     "Enter",
     "Image",
     "Local",
@@ -27,18 +28,23 @@
     "definition",
     "floatstyle",
     "include",
+    "includegraphics",
     "integral",
     "latex",
     "listings",
     "macros",
     "mainmatter",
     "matplotlib",
+    "mgrid",
     "mode",
     "newtheorem",
     "numpy",
     "preamble",
+    "pyplot",
     "russian",
+    "streamplot",
     "theorem",
-    "verbatim"
+    "verbatim",
+    "Спиралевидно"
   ]
 }
