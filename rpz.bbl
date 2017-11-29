@@ -25,4 +25,19 @@ Matplotlib - библиотека для визуализации данных.
 \newblock
   \url{http://matplotlib.org/examples/images_contours_and_fields/streamplot_demo_features.html}.
 
+\bibitem{bookdiff}
+\selectlanguageifdefined{english}
+\BibEmph{В.Г.Пименов}. Избранные главы
+  дифференциальных уравнений~/ ~В.Г.Пименов.
+  ---
+\newblock Урал. ун-т.
+
+\bibitem{bookananlyz}
+\selectlanguageifdefined{english}
+\BibEmph{А.В.Ким,~В.Г.Пименов}. i-Гладкий анализ и
+  численные методы решения
+  функционально-дифференциальных
+  уравнений~/ В.Г.Пименов~А.В.Ким. ---
+\newblock М.
+
 \end{thebibliography}
