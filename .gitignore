@@ -4,6 +4,5 @@
 *.log
 *.fdb_latexmk
 *.zip
-*.bib
 *.out
 *.toc
