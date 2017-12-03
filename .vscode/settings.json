@@ -22,10 +22,14 @@
     "alpha",
     "appendix",
     "backmatter",
+    "biblio",
+    "bookdiff",
     "cases",
     "cite",
     "clearpage",
     "definition",
+    "eqref",
+    "floatname",
     "floatstyle",
     "include",
     "includegraphics",
@@ -37,6 +41,7 @@
     "matplotlib",
     "mgrid",
     "mode",
+    "newfloat",
     "newtheorem",
     "numpy",
     "preamble",
@@ -45,6 +50,11 @@
     "streamplot",
     "theorem",
     "verbatim",
-    "Спиралевидно"
+    "Спиралевидно",
+    "андронова",
+    "виджета",
+    "витта",
+    "линеаризированную",
+    "полутраекторией"
   ]
 }
