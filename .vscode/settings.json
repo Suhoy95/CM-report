@@ -29,15 +29,18 @@
     "clearpage",
     "definition",
     "eqref",
+    "fdb",
     "floatname",
     "floatstyle",
     "include",
     "includegraphics",
     "integral",
     "latex",
+    "latexmk",
     "listings",
     "macros",
     "mainmatter",
+    "mathrm",
     "matplotlib",
     "mgrid",
     "mode",
@@ -48,6 +51,7 @@
     "pyplot",
     "russian",
     "streamplot",
+    "synctex",
     "theorem",
     "verbatim",
     "Спиралевидно",
@@ -56,6 +60,7 @@
     "витта",
     "линеаризированной",
     "линеаризированную",
-    "полутраекторией"
+    "полутраекторией",
+    "разбалтывается"
   ]
 }
